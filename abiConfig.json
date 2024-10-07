@@ -1,0 +1,71 @@
+{
+    "projectName": "shadowcorns",
+    "buildDirectory": "build",
+    "abiOutputDirectory": "abis",
+    "abiConfigurations": [
+        {
+            "configuration": "public",
+            "sortedJSON": true,
+            "searchRecursively": true,
+            "contractsToInclude": [],
+            "contractsToIgnore": [
+                "DebugFacet",
+                "DiamondCutFacet",
+                "Exploit",
+                "ExtendedDiamondCutFacet",
+                "HatchingInitializerFacet",
+                "LinkMock",
+                "MockErc20",
+                "MockFacet",
+                "MockFacet2",
+                "MockTerminus",
+                "NamesLoaderFacet",
+                "RNGInitializerFacet",
+                "ShadowcornInitializerFacet",
+                "SupportInterfacesIntializerFacet",
+                "DiamondCutFacet",
+                "DiamondLoupeFacet",
+                "OwnershipFacet",
+                "IShadowcornStatsFacet",
+                "RNGFacet"
+            ],
+            "eventsToIgnore": ["DebugActivity", "OwnershipTransferred", "DiamondCut"],
+            "functionsToIgnore": [
+                "setHatchingCosts",
+                "init",
+                "transferOwnership",
+                "setChainlinkVRFCoordinator",
+                "setChainlinkVRFFee",
+                "setChainlinkVRFKeyhash",
+                "setVRFBlocksToRespond",
+                "initializeData",
+                "initializeSupportInterfaces",
+                "owner",
+                "facets",
+                "facetFunctionSelectors",
+                "facetAddresses",
+                "facetAddress",
+                "diamondCut"
+            ],
+            "selectorsToIgnore": [],
+            "eventsPrecedence": {
+                "OwnershipTransferred": "LibDiamond",
+                "DiamondCut": "LibDiamond"
+            }
+        },
+        {
+            "configuration": "lgInternal",
+            "sortedJSON": true,
+            "searchRecursively": true,
+            "contractsToInclude": [],
+            "contractsToIgnore": ["Exploit", "LinkMock", "MockErc20", "MockFacet", "MockFacet2", "MockTerminus"],
+            "eventsToIgnore": [],
+            "functionsToIgnore": [],
+            "selectorsToIgnore": [],
+            "eventsPrecedence": {
+                "OwnershipTransferred": "LibDiamond",
+                "DiamondCut": "LibDiamond"
+            }
+        }
+    ]
+}

@@ -1,0 +1,2128 @@
+[
+    {
+        "type": "function",
+        "name": "beginHatching",
+        "inputs": [
+            {
+                "name": "terminusPoolId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x9ca8bbf2"
+    },
+    {
+        "type": "function",
+        "name": "getHatchesInProgress",
+        "inputs": [
+            {
+                "name": "playerWallet",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "",
+                "type": "bool[]",
+                "internalType": "bool[]"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xc596e400"
+    },
+    {
+        "type": "function",
+        "name": "getHatchesStatus",
+        "inputs": [
+            {
+                "name": "playerWallet",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "",
+                "type": "string[]",
+                "internalType": "string[]"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x1ed7a56b"
+    },
+    {
+        "type": "function",
+        "name": "retryHatching",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x876e305a"
+    },
+    {
+        "type": "function",
+        "name": "checkConstraint",
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "constraint",
+                "type": "tuple",
+                "internalType": "struct LibConstraints.Constraint",
+                "components": [
+                    {
+                        "name": "constraintType",
+                        "type": "uint128",
+                        "internalType": "uint128"
+                    },
+                    {
+                        "name": "operator",
+                        "type": "uint128",
+                        "internalType": "uint128"
+                    },
+                    {
+                        "name": "value",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    }
+                ]
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x3da2579c"
+    },
+    {
+        "type": "function",
+        "name": "checkConstraintForUserAndExtraTokens",
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "constraint",
+                "type": "tuple",
+                "internalType": "struct LibConstraints.Constraint",
+                "components": [
+                    {
+                        "name": "constraintType",
+                        "type": "uint128",
+                        "internalType": "uint128"
+                    },
+                    {
+                        "name": "operator",
+                        "type": "uint128",
+                        "internalType": "uint128"
+                    },
+                    {
+                        "name": "value",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "name": "extraTokenIdsToCheck",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xf7308ef9"
+    },
+    {
+        "type": "function",
+        "name": "CALLBACK_SIGNATURE",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x16281266"
+    },
+    {
+        "type": "function",
+        "name": "SUPPORTS_INTERFACE_STORAGE_POSITION",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x3a53ff49"
+    },
+    {
+        "type": "function",
+        "name": "role",
+        "inputs": [
+            {
+                "name": "account",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple",
+                "internalType": "struct ITestnetDebugRegistry.Role",
+                "components": [
+                    {
+                        "name": "existsInSystem",
+                        "type": "bool",
+                        "internalType": "bool"
+                    },
+                    {
+                        "name": "admin",
+                        "type": "bool",
+                        "internalType": "bool"
+                    },
+                    {
+                        "name": "debugger",
+                        "type": "bool",
+                        "internalType": "bool"
+                    },
+                    {
+                        "name": "banned",
+                        "type": "bool",
+                        "internalType": "bool"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xd590f8c9"
+    },
+    {
+        "type": "function",
+        "name": "getFullName",
+        "inputs": [
+            {
+                "name": "_tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x465411c1"
+    },
+    {
+        "type": "function",
+        "name": "getFullNameFromDNA",
+        "inputs": [
+            {
+                "name": "_dna",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x50a6b1e1"
+    },
+    {
+        "type": "function",
+        "name": "lookupFirstName",
+        "inputs": [
+            {
+                "name": "_nameId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x81dca44a"
+    },
+    {
+        "type": "function",
+        "name": "lookupLastName",
+        "inputs": [
+            {
+                "name": "_nameId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xc9516ab3"
+    },
+    {
+        "type": "function",
+        "name": "registerFirstNames",
+        "inputs": [
+            {
+                "name": "_ids",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "_names",
+                "type": "string[]",
+                "internalType": "string[]"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x4c782e20"
+    },
+    {
+        "type": "function",
+        "name": "registerLastNames",
+        "inputs": [
+            {
+                "name": "_ids",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "_names",
+                "type": "string[]",
+                "internalType": "string[]"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x1ae3c187"
+    },
+    {
+        "type": "function",
+        "name": "resetFirstNamesList",
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x7d92016f"
+    },
+    {
+        "type": "function",
+        "name": "resetLastNamesList",
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xb6798506"
+    },
+    {
+        "type": "function",
+        "name": "retireFirstName",
+        "inputs": [
+            {
+                "name": "_id",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_delete",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "selector": "0x523aa698"
+    },
+    {
+        "type": "function",
+        "name": "retireLastName",
+        "inputs": [
+            {
+                "name": "_id",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_delete",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "selector": "0x63f99bd5"
+    },
+    {
+        "type": "function",
+        "name": "approve",
+        "inputs": [
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x095ea7b3"
+    },
+    {
+        "type": "function",
+        "name": "balanceOf",
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x70a08231"
+    },
+    {
+        "type": "function",
+        "name": "burn",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x42966c68"
+    },
+    {
+        "type": "function",
+        "name": "contractURI",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xe8a3d485"
+    },
+    {
+        "type": "function",
+        "name": "getAllTokensByOwner",
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xe9fda7d4"
+    },
+    {
+        "type": "function",
+        "name": "getApproved",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x081812fc"
+    },
+    {
+        "type": "function",
+        "name": "isApprovedForAll",
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "operator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xe985e9c5"
+    },
+    {
+        "type": "function",
+        "name": "license",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x6b87d24c"
+    },
+    {
+        "type": "function",
+        "name": "name",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x06fdde03"
+    },
+    {
+        "type": "function",
+        "name": "ownerOf",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x6352211e"
+    },
+    {
+        "type": "function",
+        "name": "safeTransferFrom",
+        "inputs": [
+            {
+                "name": "from",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x42842e0e"
+    },
+    {
+        "type": "function",
+        "name": "safeTransferFrom",
+        "inputs": [
+            {
+                "name": "from",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_data",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xb88d4fde"
+    },
+    {
+        "type": "function",
+        "name": "setApprovalForAll",
+        "inputs": [
+            {
+                "name": "operator",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "approved",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xa22cb465"
+    },
+    {
+        "type": "function",
+        "name": "symbol",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x95d89b41"
+    },
+    {
+        "type": "function",
+        "name": "tokenByIndex",
+        "inputs": [
+            {
+                "name": "index",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x4f6ccce7"
+    },
+    {
+        "type": "function",
+        "name": "tokenOfOwnerByIndex",
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "index",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x2f745c59"
+    },
+    {
+        "type": "function",
+        "name": "tokenURI",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xc87b56dd"
+    },
+    {
+        "type": "function",
+        "name": "totalSupply",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x18160ddd"
+    },
+    {
+        "type": "function",
+        "name": "transferFrom",
+        "inputs": [
+            {
+                "name": "from",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x23b872dd"
+    },
+    {
+        "type": "function",
+        "name": "faucetMintShadowcorn",
+        "inputs": [
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "class",
+                "type": "uint8",
+                "internalType": "uint8"
+            },
+            {
+                "name": "rarity",
+                "type": "uint8",
+                "internalType": "uint8"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x81d48864"
+    },
+    {
+        "type": "function",
+        "name": "getArcana",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "arcana",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x5ba88c4e"
+    },
+    {
+        "type": "function",
+        "name": "getClass",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "class",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x512d62df"
+    },
+    {
+        "type": "function",
+        "name": "getClassRarityAndStat",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "statId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "class",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "rarity",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "stat",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xec968b60"
+    },
+    {
+        "type": "function",
+        "name": "getCunning",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "cunning",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x3c594255"
+    },
+    {
+        "type": "function",
+        "name": "getMight",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "might",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x19101530"
+    },
+    {
+        "type": "function",
+        "name": "getRarity",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "rarity",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x48758697"
+    },
+    {
+        "type": "function",
+        "name": "getStats",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "might",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "wickedness",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "tenacity",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "cunning",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "arcana",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x7b303965"
+    },
+    {
+        "type": "function",
+        "name": "getTenacity",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "tenacity",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xc1a13da7"
+    },
+    {
+        "type": "function",
+        "name": "getWickedness",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "wickedness",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xc6fc8e2f"
+    },
+    {
+        "type": "function",
+        "name": "approveForPool",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "operator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x85bc82e2"
+    },
+    {
+        "type": "function",
+        "name": "balanceOf",
+        "inputs": [
+            {
+                "name": "account",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "id",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x00fdd58e"
+    },
+    {
+        "type": "function",
+        "name": "balanceOfBatch",
+        "inputs": [
+            {
+                "name": "accounts",
+                "type": "address[]",
+                "internalType": "address[]"
+            },
+            {
+                "name": "ids",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x4e1273f4"
+    },
+    {
+        "type": "function",
+        "name": "burn",
+        "inputs": [
+            {
+                "name": "from",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xf5298aca"
+    },
+    {
+        "type": "function",
+        "name": "createPoolV1",
+        "inputs": [
+            {
+                "name": "_capacity",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_transferable",
+                "type": "bool",
+                "internalType": "bool"
+            },
+            {
+                "name": "_burnable",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "selector": "0x3bad2d82"
+    },
+    {
+        "type": "function",
+        "name": "createPoolV2",
+        "inputs": [
+            {
+                "name": "_capacity",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_transferable",
+                "type": "bool",
+                "internalType": "bool"
+            },
+            {
+                "name": "_burnable",
+                "type": "bool",
+                "internalType": "bool"
+            },
+            {
+                "name": "poolURI",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "selector": "0x84fa03a1"
+    },
+    {
+        "type": "function",
+        "name": "createSimplePool",
+        "inputs": [
+            {
+                "name": "_capacity",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "selector": "0xb507ef52"
+    },
+    {
+        "type": "function",
+        "name": "isApprovedForPool",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "operator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x027b3fc2"
+    },
+    {
+        "type": "function",
+        "name": "mint",
+        "inputs": [
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "data",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x731133e9"
+    },
+    {
+        "type": "function",
+        "name": "mintBatch",
+        "inputs": [
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "poolIDs",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "amounts",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "data",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x1f7fdffa"
+    },
+    {
+        "type": "function",
+        "name": "paymentToken",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x3013ce29"
+    },
+    {
+        "type": "function",
+        "name": "poolBasePrice",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x8925d013"
+    },
+    {
+        "type": "function",
+        "name": "poolIsBurnable",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x3c50a3c5"
+    },
+    {
+        "type": "function",
+        "name": "poolIsTransferable",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x69453ce9"
+    },
+    {
+        "type": "function",
+        "name": "poolMintBatch",
+        "inputs": [
+            {
+                "name": "id",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "toAddresses",
+                "type": "address[]",
+                "internalType": "address[]"
+            },
+            {
+                "name": "amounts",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x21adca96"
+    },
+    {
+        "type": "function",
+        "name": "safeBatchTransferFrom",
+        "inputs": [
+            {
+                "name": "from",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "ids",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "amounts",
+                "type": "uint256[]",
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "data",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x2eb2c2d6"
+    },
+    {
+        "type": "function",
+        "name": "safeTransferFrom",
+        "inputs": [
+            {
+                "name": "from",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "id",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "data",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xf242432a"
+    },
+    {
+        "type": "function",
+        "name": "setContractURI",
+        "inputs": [
+            {
+                "name": "_contractURI",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x938e3d7b"
+    },
+    {
+        "type": "function",
+        "name": "setController",
+        "inputs": [
+            {
+                "name": "newController",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x92eefe9b"
+    },
+    {
+        "type": "function",
+        "name": "setPaymentToken",
+        "inputs": [
+            {
+                "name": "newPaymentToken",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x6a326ab1"
+    },
+    {
+        "type": "function",
+        "name": "setPoolBasePrice",
+        "inputs": [
+            {
+                "name": "newBasePrice",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x78cf2e84"
+    },
+    {
+        "type": "function",
+        "name": "setPoolBurnable",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "burnable",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x2365c859"
+    },
+    {
+        "type": "function",
+        "name": "setPoolController",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "newController",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xdc55d0b2"
+    },
+    {
+        "type": "function",
+        "name": "setPoolTransferable",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "transferable",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0xf3dc0a85"
+    },
+    {
+        "type": "function",
+        "name": "setURI",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "poolURI",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x862440e2"
+    },
+    {
+        "type": "function",
+        "name": "supportsInterface",
+        "inputs": [
+            {
+                "name": "interfaceId",
+                "type": "bytes4",
+                "internalType": "bytes4"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x01ffc9a7"
+    },
+    {
+        "type": "function",
+        "name": "terminusController",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x366e59e3"
+    },
+    {
+        "type": "function",
+        "name": "terminusPoolCapacity",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x5dc8bdf8"
+    },
+    {
+        "type": "function",
+        "name": "terminusPoolController",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xd0c402e5"
+    },
+    {
+        "type": "function",
+        "name": "terminusPoolSupply",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xa44cfc82"
+    },
+    {
+        "type": "function",
+        "name": "totalPools",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0xab3c7e52"
+    },
+    {
+        "type": "function",
+        "name": "unapproveForPool",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "operator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x1fbeae86"
+    },
+    {
+        "type": "function",
+        "name": "uri",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "selector": "0x0e89341c"
+    },
+    {
+        "type": "function",
+        "name": "withdrawPayments",
+        "inputs": [
+            {
+                "name": "toAddress",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "selector": "0x0e7afec5"
+    },
+    {
+        "type": "event",
+        "name": "AdminChanged",
+        "inputs": [
+            {
+                "name": "previousAdmin",
+                "type": "address",
+                "indexed": false,
+                "internalType": "address"
+            },
+            {
+                "name": "newAdmin",
+                "type": "address",
+                "indexed": false,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x7e644d79"
+    },
+    {
+        "type": "event",
+        "name": "Approval",
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "approved",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x8c5be1e5"
+    },
+    {
+        "type": "event",
+        "name": "ApprovalForAll",
+        "inputs": [
+            {
+                "name": "account",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "operator",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "approved",
+                "type": "bool",
+                "indexed": false,
+                "internalType": "bool"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x17307eab"
+    },
+    {
+        "type": "event",
+        "name": "BatchMetadataUpdate",
+        "inputs": [
+            {
+                "name": "_fromTokenId",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "_toTokenId",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x6bd5c950"
+    },
+    {
+        "type": "event",
+        "name": "MetadataUpdate",
+        "inputs": [
+            {
+                "name": "_tokenId",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xf8e1a15a"
+    },
+    {
+        "type": "event",
+        "name": "Transfer",
+        "inputs": [
+            {
+                "name": "from",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xddf252ad"
+    },
+    {
+        "type": "event",
+        "name": "HatchingShadowcornCompleted",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "playerWallet",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xba2c5842"
+    },
+    {
+        "type": "event",
+        "name": "HatchingShadowcornRNGRequested",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "playerWallet",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "blockDeadline",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x7f9c25d6"
+    },
+    {
+        "type": "event",
+        "name": "DNAUpdated",
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "dna",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x9224d149"
+    },
+    {
+        "type": "event",
+        "name": "ControlTransferred",
+        "inputs": [
+            {
+                "name": "previousController",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "newController",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xa06677f7"
+    },
+    {
+        "type": "event",
+        "name": "PoolControlTransferred",
+        "inputs": [
+            {
+                "name": "poolID",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "previousController",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "newController",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xbb8e9c3c"
+    },
+    {
+        "type": "event",
+        "name": "PoolMintBatch",
+        "inputs": [
+            {
+                "name": "id",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            },
+            {
+                "name": "operator",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "from",
+                "type": "address",
+                "indexed": false,
+                "internalType": "address"
+            },
+            {
+                "name": "toAddresses",
+                "type": "address[]",
+                "indexed": false,
+                "internalType": "address[]"
+            },
+            {
+                "name": "amounts",
+                "type": "uint256[]",
+                "indexed": false,
+                "internalType": "uint256[]"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xba627779"
+    },
+    {
+        "type": "event",
+        "name": "TransferBatch",
+        "inputs": [
+            {
+                "name": "operator",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "from",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "ids",
+                "type": "uint256[]",
+                "indexed": false,
+                "internalType": "uint256[]"
+            },
+            {
+                "name": "values",
+                "type": "uint256[]",
+                "indexed": false,
+                "internalType": "uint256[]"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x4a39dc06"
+    },
+    {
+        "type": "event",
+        "name": "TransferSingle",
+        "inputs": [
+            {
+                "name": "operator",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "from",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "id",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            },
+            {
+                "name": "value",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0xc3d58168"
+    },
+    {
+        "type": "event",
+        "name": "URI",
+        "inputs": [
+            {
+                "name": "value",
+                "type": "string",
+                "indexed": false,
+                "internalType": "string"
+            },
+            {
+                "name": "id",
+                "type": "uint256",
+                "indexed": true,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false,
+        "selector": "0x6bb7ff70"
+    }
+]
